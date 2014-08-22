@@ -1,0 +1,30 @@
+{
+  "name": "paypal-ipn-amqp",
+  "version": "1.0.0",
+  "description": "Listen to paypal IPN calls, acknowledge them, place them on an AMQP queue.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timothyleslieallen/paypal-ipn"
+  },
+  "keywords": [
+    "paypal",
+    "ipn",
+    "amqp"
+  ],
+  "author": "Tim Allen <tim@noblesamurai.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/timothyleslieallen/paypal-ipn/issues"
+  },
+  "dependencies": {
+    "amqp-wrapper": "^3.1.0"
+  },
+  "devDependencies": {
+    "expect.js": "~0.2.0",
+    "mocha": "~1.17.0"
+  }
+}
