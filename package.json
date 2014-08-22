@@ -21,7 +21,9 @@
     "url": "https://github.com/timothyleslieallen/paypal-ipn/issues"
   },
   "dependencies": {
-    "amqp-wrapper": "^3.1.0"
+    "amqp-wrapper": "^4.0.0",
+    "express": "^4.8.5",
+    "paypal-ipn": "^1.0.1"
   },
   "devDependencies": {
     "expect.js": "~0.2.0",
