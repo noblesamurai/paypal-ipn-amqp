@@ -4,8 +4,8 @@ module.exports = {
     exchange: process.env.AMQP_EXCHANGE || 'test',
     queues: {
       publish: [{
-        name: process.env.QUEUE_NAME || 'ipn.event.sandbox',
-        routingKey: process.env.QUEUE_ROUTING_KEY || 'ipn.event.sandbox'
+        name: process.env.AMQP_QUEUE_NAME || 'ipn.event.sandbox',
+        routingKey: process.env.AMQP_QUEUE_ROUTING_KEY || 'ipn.event.sandbox'
       }]
     }
   }
