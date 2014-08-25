@@ -16,7 +16,7 @@ app.post('/', function(req, res) {
       console.error(msg);
     } else {
       // PayPal have told us all is OK.
-      amqp.publishToQueue(config.amqp.queue.name, req.body);
+      amqp.publishToQueue(config.amqp.queues.publish[0].name, req.body);
     }
   });
 });
