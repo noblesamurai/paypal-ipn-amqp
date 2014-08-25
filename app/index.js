@@ -4,11 +4,11 @@ var express = require('express'),
     amqp = require('amqp-wrapper')(config.amqp),
     ipn = require('paypal-ipn');
 
-var app = express().use(bodyParser.json());
+var app = express().use(bodyParser.urlencoded());
 
 app.post('/', function(req, res) {
   // Must respond to PayPal IPN request with an empty 200 first.
-  res.send(200);
+  res.status(200).end();
 
   // Posts back to Paypal to let them know we got this OK.
   ipn.verify(req.body, function callback(err, msg) {
