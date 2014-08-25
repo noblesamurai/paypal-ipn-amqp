@@ -6,7 +6,7 @@ var express = require('express'),
 
 var app = express().use(bodyParser.json());
 
-app.get('/', function(req, res) {
+app.post('/', function(req, res) {
   // Must respond to PayPal IPN request with an empty 200 first.
   res.send(200);
 
