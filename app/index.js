@@ -11,7 +11,7 @@ app.post('/', function(req, res) {
   res.send(200);
 
   // Posts back to Paypal to let them know we got this OK.
-  ipn.verify(params, function callback(err, msg) {
+  ipn.verify(req.body, function callback(err, msg) {
     if (err) {
       console.error(msg);
     } else {
