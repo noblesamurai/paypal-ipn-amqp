@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "amqp-wrapper": "^4.0.0",
+    "body-parser": "^1.6.5",
     "express": "^4.8.5",
     "paypal-ipn": "^1.0.1"
   },

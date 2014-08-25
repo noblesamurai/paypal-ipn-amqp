@@ -5,7 +5,7 @@ module.exports = {
     queues: {
       publish: [{
         name: process.env.QUEUE_NAME || 'ipn.event.sandbox',
-        routingKey: config.amqp.queue.routingKey || 'ipn.event.sandbox'
+        routingKey: process.env.QUEUE_ROUTING_KEY || 'ipn.event.sandbox'
       }]
     }
   }

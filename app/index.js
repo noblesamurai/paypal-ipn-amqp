@@ -4,7 +4,7 @@ var express = require('express'),
     amqp = require('amqp-wrapper')(config.amqp),
     ipn = require('paypal-ipn');
 
-var app = express().use(bodyParser());
+var app = express().use(bodyParser.json());
 
 app.get('/', function(req, res) {
   // Must respond to PayPal IPN request with an empty 200 first.
@@ -28,9 +28,8 @@ function amqpConnectDone(err) {
     console.log(err);
     process.exit(1);
   }
-  app.listen(config.port, function() {
-    console.log('Listening on port %d', server.address().port);
-  });
+  var listener = app.listen(config.port || process.env.PORT);
+  console.log('Listening on port %d', listener.address().port);
 }
 
 // vim: set et sw=2 ts=2 colorcolumn=80:
